@@ -7,7 +7,8 @@ import org.springframework.stereotype.Service;
 public class MyServiceImpl implements MyService {
 
     @Override
-    public String getSayHello() {
-        return "Hello Java World";
+    public String getSayHello(String id) {
+
+        return "Hello Java World," + id + "!!!!";
     }
 }
