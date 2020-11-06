@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.alex.ras.test_rep.domain.SimpleClass;
 import ru.alex.ras.test_rep.services.MyService;
 
 @RestController
@@ -19,7 +20,7 @@ public class SimpleRestController {
     }
 
     @GetMapping(path = "/test")
-    public ResponseEntity<String> getSayHelloMethod()
+    public ResponseEntity<SimpleClass> getSayHelloMethod()
     {
         return new ResponseEntity<>(myService.getSayHello(), HttpStatus.OK);
     }
